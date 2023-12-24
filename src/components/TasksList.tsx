@@ -1,10 +1,11 @@
 import { useTaskContext } from "@/contexts/TasksContext";
 import { TaskItem } from "./TaskItem";
+import { ScrollArea } from "./ui/scroll-area";
 
 const TasksList = () => {
   const { handleTaskUpdate, tasks } = useTaskContext();
   return (
-    <div className="space-y-2">
+    <ScrollArea className="border rounded-md max-h-[500px]">
       {tasks.map((task) => (
         <TaskItem
           id={task.id}
@@ -14,7 +15,7 @@ const TasksList = () => {
           title={task.title}
         />
       ))}
-    </div>
+    </ScrollArea>
   );
 };
 
