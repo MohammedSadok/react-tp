@@ -1,12 +1,8 @@
-import { Task } from "./FormTask";
+import { useTaskContext } from "@/contexts/TasksContext";
 import { TaskItem } from "./TaskItem";
 
-type Props = {
-  tasks: Task[];
-  handleTaskUpdate: (index: number) => void;
-};
-
-const TasksList = ({ handleTaskUpdate, tasks }: Props) => {
+const TasksList = () => {
+  const { handleTaskUpdate, tasks } = useTaskContext();
   return (
     <div className="space-y-2">
       {tasks.map((task) => (

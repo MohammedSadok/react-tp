@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { useTaskContext } from "@/contexts/TasksContext";
 export interface Task {
   id: number;
   title: string;
   description: string;
   isCompleted: boolean;
 }
-type Props = {
-  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
-};
 
-const FormTask = ({ setTasks }: Props) => {
+
+const FormTask = () => {
+  const {setTasks} =  useTaskContext();
   const [data, setData] = useState<Task>({
     id: 0,
     title: "",

@@ -1,6 +1,6 @@
 import { Task } from "@/components/FormTask";
-import React, { createContext, useContext, useState, ReactNode } from "react";
-
+import React, { ReactNode, createContext, useContext, useState } from "react";
+import tasksData from "../data/tasks.json";
 
 interface TaskContextProps {
   tasks: Task[];
@@ -23,7 +23,7 @@ interface TaskProviderProps {
 }
 
 export const TaskProvider: React.FC<TaskProviderProps> = ({ children }) => {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>(tasksData);
 
   const handleTaskUpdate = (id: number) => {
     setTasks((prevTasks) => {
