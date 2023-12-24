@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Complete Project Proposal",
+    "description": "Finish writing and editing the project proposal for client X.",
+    "isCompleted": false
+  },
+  {
+    "title": "Meeting with Team",
+    "description": "Attend the weekly team meeting to discuss project status and updates.",
+    "isCompleted": true
+  },
+  {
+    "title": "Research New Technologies",
+    "description": "Investigate and research the latest technologies relevant to our project.",
+    "isCompleted": false
+  },
+  {
+    "title": "Update Documentation",
+    "description": "Update the project documentation with the latest changes and improvements.",
+    "isCompleted": false
+  },
+  {
+    "title": "Code Review",
+    "description": "Participate in a code review session for the recent feature implementation.",
+    "isCompleted": true
+  }
+]
