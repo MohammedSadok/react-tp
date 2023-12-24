@@ -1,9 +1,6 @@
+import { Task } from "./FormTask";
 import { TaskItem } from "./TaskItem";
-interface Task {
-  title: string;
-  description: string;
-  isCompleted: boolean;
-}
+
 type Props = {
   tasks: Task[];
   handleTaskUpdate: (index: number) => void;
@@ -12,9 +9,9 @@ type Props = {
 const TasksList = ({ handleTaskUpdate, tasks }: Props) => {
   return (
     <div className="space-y-2">
-      {tasks.map((task, index) => (
+      {tasks.map((task) => (
         <TaskItem
-          index={index}
+          id={task.id}
           handleChange={handleTaskUpdate}
           description={task.description}
           isCompleted={task.isCompleted}

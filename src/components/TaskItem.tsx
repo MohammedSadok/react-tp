@@ -2,21 +2,21 @@ import { cn } from "@/lib/utils";
 import { Checkbox } from "./ui/checkbox";
 
 interface Task {
-  index: number;
+  id: number;
   title: string;
   description: string;
   isCompleted: boolean;
   handleChange: (index: number) => void;
 }
 export function TaskItem({
-  index,
+  id,
   description,
   isCompleted,
   title,
   handleChange,
 }: Task) {
   const handleTaskChange = () => {
-    handleChange(index);
+    handleChange(id);
   };
 
   return (
